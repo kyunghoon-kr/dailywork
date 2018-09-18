@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
-
 void main()
 {
 	int key;
@@ -11,8 +10,9 @@ void main()
 	while (1) {
 		if (kbhit()) {
 			key = getch();
-			if (key == 224)
+			switch (key)
 			{
+			case 224:
 				key = getch();
 				switch (key) {
 				case 72:
@@ -27,18 +27,26 @@ void main()
 				case 77:
 					printf("방향키 오른쪽이 입력되었습니다.\n");
 					break;
+				case 0:
+					printf("프로그램을 종료합니다");
 				}
+				break;
 
-			}
-			else if (key == 0)
-			{
-				printf("프로그램을 종료합니다.\n");
-				exit(1);
-			}
-			else printf("무슨 말인지 모르겠습니다.\n");
+
+			case 48:
+				if (key == 48) {
+					printf("프로그램을 종료합니다.\n");
+					exit(0);
+				}
+				break;
+
+
 			
+				
+			
+			}
 		}
 	}
+}
 
 	
-}
