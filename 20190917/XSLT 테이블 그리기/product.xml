@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt_table.xslt"?>
+<products_list>
+  <product>
+    <name>당근</name>
+    <category>vegetable</category>
+    <amount>55</amount>
+  </product>
+  <product>
+    <name>복숭아</name>
+    <category>fruit</category>
+    <amount>40</amount>
+  </product>
+  <product>
+    <name>우유</name>
+    <category>dairyproduct</category>
+    <amount>25</amount>
+  </product>
+  <product>
+    <name>사과</name>
+    <category>fruit</category>
+    <amount>15</amount>
+  </product>
+  <product>
+    <name>자두</name>
+    <category>fruit</category>
+    <amount>35</amount>
+  </product>
+  <product>
+    <name>요거트</name>
+    <category>dairyproduct</category>
+    <amount>60</amount>
+  </product>
+  <product>
+    <name>오이</name>
+    <category>vegetable</category>
+    <amount>10</amount>
+  </product>
+</products_list>
