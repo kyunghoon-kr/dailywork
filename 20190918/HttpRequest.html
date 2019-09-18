@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>XMLHttpRequest</title>
+    <script>
+        function buttonClicked() {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (this.status == 200 && this.readyState == this.DONE) {
+                    document.getElementById("text").innerHTML = xmlHttp.responseText;
+                }
+            }
+        };
+
+        xmlHttp.open("GET", "/hi.txt", true);
+		xmlHttp.send();
+    </script>
+</head>
+<body>
+    <button onclick="buttonClicked()">요청 전송하기!</button>
+    <p id="text">아</p>
+</body>
+</html>
