@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>XML Parser</title>
+    <script>
+		function parseText() {
+			var text, xmlParser, xmlDoc;
+			text = "<country><name>korea</name>" +
+				"<capital>seoul</capital></country>"
+    //        text = "<language><name>HTML</name>" + 
+				//"<category>web</category>" + 
+				//"<priority>high</priority>" + 
+				//"<standard version='5.1'>W3C</standard></language>";
+			xmlParser = new DOMParser();	// DOMParser 객체를 생성함.
+			// parseFromString() 메소드를 이용해 문자열을 파싱함.
+			xmlDoc = xmlParser.parseFromString(text, "text/xml");
+            document.getElementById("text").innerHTML =
+                xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue
+                + "의 수도는 " +
+                xmlDoc.getElementsByTagName("capital")[0].childNodes[0].nodeValue + " 입니다.";
+		}
+    </script>
+</head>
+
+<body>
+    <h1>문자열 파싱</h1>
+    <button onclick="parseText()">파싱하기!</button>
+    <p id="text"></p>
+</body>
+
+</html>
