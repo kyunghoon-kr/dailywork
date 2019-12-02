@@ -1,2 +1,2 @@
-jest.config.css linguist-vendored
-yarn-*.css linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
