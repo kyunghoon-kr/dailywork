@@ -1,0 +1,25 @@
+$ref: #fa5252;
+
+@mixin square($size) {
+    $calculated: 32px * $size;
+    width: $calculated;
+    height: $calculated;
+}
+
+.SassComponent {
+    display: flex;
+    .box {
+        background: red;
+        cursor: pointer;
+        &.red { // .red가 .box와 함께 사용될 때
+            background: $red;
+            @include square(1);
+        }
+        &:hover { // .red가 .box와 함께 사용될 때
+            background: black;
+            @include square(1);
+        }
+    }
+    
+
+}
