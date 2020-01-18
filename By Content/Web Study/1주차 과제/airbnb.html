@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>에어비앤비</title>
+    <style>
+        body {
+            background-image:url('background.jpg');
+        }
+        button {
+            background-color: red;
+            color: white;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .form {
+            margin: 50px 160px;
+            padding: 20px;
+            background-color: white;
+            width: 500px;
+        }
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap : wrap;
+        }
+        .text-item {
+            flex-direction: column;
+        }
+        .text-bottom {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        input{
+            border: 2px solid;
+            padding: 10px;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .text {
+            font-size: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>에어비앤비에서 숙소, 호텔 등을 예약하세요</h1>
+
+        <div class="flex-container">
+            <div class="text-item">
+                <p class="text">목적지</p>
+                <input style="width:450px;" placeholder="모든 위치"/>
+            </div>
+            <div class="text-item">
+                <p class="text">체크인</p>
+                <input placeholder="년/월/일"/>
+            </div>
+            <div class="text-item">
+                <p class="text">체크아웃</p>
+                <input placeholder="년/월/일"/>
+            </div>
+            <div class="text-item">
+                <p class="text">어른</p>
+                <input placeholder="성인 1명"/>
+            </div>
+            <div class="text-item">
+                <p class="text">어린이</p>
+                <input placeholder="어린이 0명"/>
+            </div>
+            <button style="width: 480px; height:40px;">검색</button>
+        </div>
+    </div>
+    <div class="form">
+        <div class="text-bottom">
+            <div style="margin-right: 50px; border-right: 3px solid; padding-right:50px;">
+                <a class="text">서울에서 숙소 호스팅을 통해 월간 최대 <br/>##$_0D$##$1,038의 수익을 올려보세요.</a>
+            </div>
+            <div>
+                <a style="font-size:20px;">호스팅 하기 ></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
