@@ -1,0 +1,21 @@
+{
+  "name": "githubapi",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "index.js",
+  "scripts": {
+    "test": "d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "d"
+  },
+  "keywords": [
+    "d"
+  ],
+  "author": "d",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.19.2"
+  }
+}
