@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Vue Sample - lifecycle</title>
+    </head>
+    <body>
+        <!--3) 보여질 영역 만들기 -->
+        <div id="app">
+            {{message}}
+        </div>
+        <!--1) Vue.js cdn 링크로 가져오기 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            // 2) 인스턴스 생성
+            new Vue({
+                el: "#app",
+                data: {
+                    message: "Hello Vue.js"
+                },
+                beforeCreate: function(){
+                    console.log("beforeCreate")
+                },
+                created: function(){
+                    console.log("created")
+                },
+                mounted: function(){
+                    console.log("mounted");
+                    this.message = "Hellow Vue.js updated1";
+                },
+                updated: function(){
+                    console.log("updated")
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Vue Nested Router</title>
+    </head>
+    <body>
+        <div id="app">
+            <router-view></router-view>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+        <script>
+           // User Component 
+           var User = {
+               template:`
+                    <div>
+                        User Component
+                        <router-view><router-view>
+                    </div>
+               `
+           }
+
+           // 하위 컴포넌트 선언 
+           var UserProfile = {template:'<p>User Profile Component</p>'}
+           var UserPost = {template:'<p>User Post Component</p>'}
+
+           // routes url 연동
+           var routes = [
+               {
+                   path: '/user',
+                   component: User,
+                   children:[
+                       {
+                           path:"posts",
+                           component: UserPost
+                       },
+                       {
+                           path:"profile",
+                           component: UserProfile
+                       }
+                   ]
+               }
+           ]
+
+           var router = new VueRouter({
+               routes
+           });
+
+           new Vue({
+               router
+           }).$mount("#app");
+        </script>
+    </body>
+</html>
