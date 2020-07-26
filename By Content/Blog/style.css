@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
 @import url('https://fonts.googleapis.com/cssfamily=Noto+Serif+KR&display=swap&subset=korean');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
 /* basic */
 article, aside, canvas, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
@@ -432,6 +432,16 @@ html, body {
   display: inline;
 }
 
+
+/* 카테고리 메뉴  */
+.area_menu .list_gnb .link_gnb { 
+    border-color: rgba(255,255,255,.1);
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    margin-bottom: 3px;
+    color: white;
+    font-size: 18px;
+}
 .area_menu .list_sns:after {
   content: '';
   display: block;
@@ -449,16 +459,21 @@ html, body {
 
 .area_menu .list_sns .link_sns {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 64px;
+  height: 64px;
+}
+.area_menu .list_sns .link_company {
+    display: block;
+    width: 64px;
+    height: 64px;
+  }
+
+.area_menu .list_sns .link_github {
+  background: url(images/github.png) no-repeat center;
 }
 
-.area_menu .list_sns .link_fb {
-  background: url(images/ico_fb.png) no-repeat center;
-}
-
-.area_menu .list_sns .link_twitter {
-  background: url(images/ico_twitter.png) no-repeat center;
+.area_menu .list_sns .link_company {
+  background: url(images/zibda.png) no-repeat center;
 }
 
 .area_menu .list_sns .link_insta {
@@ -500,6 +515,11 @@ html, body {
   float: left;
 }
 
+/* 카테고리 뱃지 */
+.badge {
+    font-family: 'Poor Story', cursive;
+    color: blue;
+}
 /* container */
 #container {
   position: absolute;
@@ -585,6 +605,13 @@ html, body {
   color: #000;
   cursor: pointer;
   outline: none;
+}
+
+.menu_home {
+    font-family: 'Raleway', sans-serif;
+    border-width: 0px 0px 0px 0px;
+    margin-bottom: 20px;
+    font-size: 42px;
 }
 
 .inner_header .btn_menu {
@@ -1782,6 +1809,21 @@ html, body {
   height: auto !important;
 }
 
+.category {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #007bff;
+    font-family: 'Poor Story', cursive;
+}
+
 /* media query - mobile - category_list */
 @media screen and (max-width: 820px) {
   .category_list .info_post {
@@ -2067,8 +2109,11 @@ html, body {
   .area_menu {
     position: relative;
     width: 380px;
-    height: 100%;
+    height: 1200px;
     left: -380px;
+    background-color: #222222;
+    color: white;
+    font-family: 'Poor Story', cursive;
   }
 
   .area_menu nav {
@@ -2080,7 +2125,8 @@ html, body {
   }
 
   .area_menu .list_sns {
-    padding: 76px 0 0 61px;
+    padding: 20px 0 0 61px;
+    background-color: white;
   }
 
   .area_menu .box_visit {
@@ -2172,13 +2218,13 @@ html, body {
 
   /* area_menu */
   .area_menu {
-    display: none;
     position: relative;
-    margin-top: 83px;
-    width: 100%;
-    height: auto;
-    background: rgba(246, 246, 246, 0.95);
-    z-index: 2;
+    width: 380px;
+    height: 1200px;
+    left: -380px;
+    background-color: #222222;
+    color: white;
+    font-family: 'Poor Story', cursive;
   }
 
   .area_menu nav {

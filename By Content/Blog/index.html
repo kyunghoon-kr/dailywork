@@ -14,9 +14,11 @@
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./images/style_webicon.css" />
-
+	 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
     <script src="./images/common.js"></script>
+	
 		
 <!-- 코드 하이라이트 -->
 <script src="./images/highlight.pack.js"></script>
@@ -37,10 +39,11 @@
             <div class="area_menu">
 
                 <nav class="menu_navigation">
-                    [##_blog_menu_##]
+                    <a href="https://enfanthoon.tistory.com/"><h1 class="menu_home">HELLO WORLD</h1></a>
                     [##_category_list_##]
                 </nav>
 
+                
                 <div class="m_sidebar pc_blind">
                     <div class="related_posts_mobile">
                         <!-- related_type_view -->
@@ -50,34 +53,13 @@
                     </div>
                     <!-- // related_type_view -->
 
-                    <!-- about_me -->
-                    <div class="about_me_mobile">
-                        <div class="box_sidebar about_me">
-                            <h3 class="title_sidebar">ABOUT ME</h3>
-                            <p class="text_about">-</p>
-                        </div>
-                    </div>
+                    
                 </div>
 
-                <ul class="list_sns">
-                    <s_if_var_snsFacebook>
-                        <li><a href="[##_var_snsFacebook_##]" class="link_sns link_fb" target="_blank"><span class="blind">페이스북</span></a></li>
-                    </s_if_var_snsFacebook>
-                    <s_if_var_snsTwitter>
-                        <li><a href="[##_var_snsTwitter_##]" class="link_sns link_twitter" target="_blank"><span class="blind">트위터</span></a></li>
-                    </s_if_var_snsTwitter>
-                    <s_if_var_snsInstagram>
-                        <li><a href="[##_var_snsInstagram_##]" class="link_sns link_insta" target="_blank"><span class="blind">인스타그램</span></a></li>
-                    </s_if_var_snsInstagram>
-                </ul>
 
                 <div class="box_visit">
                     <dl class="data_today">
                         <dt class="title_visit">Today</dt>
-                        <dd class="item_visit">-</dd>
-                    </dl>
-                    <dl class="data_yesterday">
-                        <dt class="title_visit">Yesterday</dt>
                         <dd class="item_visit">-</dd>
                     </dl>
                     <dl class="data_total">
@@ -85,6 +67,12 @@
                         <dd class="item_visit">-</dd>
                     </dl>
                 </div>
+
+                <ul class="list_sns">
+                    <li><a href="https://github.com/hoonkk/" class="link_sns link_github" target="_blank"><span class="blind">Github</span></a></li>
+                    <li><a href="https://myzibda.com/" class="link_sns link_company" target="_blank"><span class="blind">zibda</span></a></li>
+                </ul>
+
             </div>
             <!-- // area_menu -->
 
@@ -171,7 +159,7 @@
                                                 <s_cover_item_article_info>
                                                     <div class="info_post">
                                                         <!-- 카테고리 링크 줄 수 없음 -->
-                                                        <a class="link_category thema_apply"><span class="category">[##_cover_item_category_##]</span></a>
+                                                        <a class="link_category thema_apply"><span class="bad bad-primary">[##_cover_item_category_##]</span></a>
                                                         <span class="date">[##_cover_item_date_##]</span>
                                                     </div>
                                                 </s_cover_item_article_info>
@@ -185,8 +173,6 @@
                                                             [##_cover_item_summary_##]
                                                         </p>
                                                     </div>
-                                                    <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                        More</button>
                                                 </a>
                                             </div>
                                         </s_cover_item>
@@ -209,7 +195,9 @@
                                                 <s_cover_item_article_info>
                                                     <div class="info_post">
                                                         <!-- 카테고리 링크 줄 수 없음 -->
-                                                        <a class="link_category thema_apply"><span class="category">[##_cover_item_category_##]</span></a>
+                                                        <a class="link_category thema_apply">
+																													<span class="category">[##_cover_item_category_##]</span>
+																												</a>
                                                         <span class="date">[##_cover_item_date_##]</span>
                                                     </div>
                                                 </s_cover_item_article_info>
@@ -226,8 +214,7 @@
                                                             [##_cover_item_summary_##]
                                                         </p>
                                                     </div>
-                                                    <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                        More</button>
+                                                    
                                                 </a>
                                             </div>
                                         </s_cover_item>
@@ -264,8 +251,7 @@
                                                                 <p class="txt_post">
                                                                     [##_cover_item_summary_##]
                                                                 </p>
-                                                                <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                                    More</button>
+                                                            
                                                             </a>
                                                         </div>
                                                     </div>
@@ -546,8 +532,7 @@
                                                         <p class="txt_post">
                                                             보호되어 있는 글입니다.
                                                         </p>
-                                                        <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                            More</button>
+                                                        
                                                     </a>
                                                 </div>
                                             </div>
@@ -624,8 +609,7 @@
                                                         <p class="txt_post">
                                                             [##_notice_rep_summary_##]
                                                         </p>
-                                                        <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                            More</button>
+                                                        
                                                     </a>
                                                 </div>
                                             </div>
@@ -798,36 +782,7 @@
                 <aside class="sidebar mobile_blind">
                     <div class="inner_sidebar thema_apply">
                         <s_sidebar>
-                            <s_sidebar_element>
-                                <!-- 인기포스트 -->
-                                <div class="related_posts">
-                                    <div class="related_type related_type_view">
-                                        <h2 class="title_related">인기포스트</h2>
-                                        <ul class="list_related">
-                                            <s_rctps_popular_rep>
-                                                <li>
-                                                    <a href="[##_rctps_rep_link_##]" class="link_related" <s_rctps_rep_thumbnail>style="background-image:url('[##_rctps_rep_thumbnail_##]')"</s_rctps_rep_thumbnail>>
-                                                        <span class="bg"></span>
-                                                        <span class="txt"><strong>[##_rctps_rep_title_##]</strong></span>
-                                                    </a>
-                                                </li>
-                                            </s_rctps_popular_rep>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </s_sidebar_element>
-
-                            <s_sidebar_element>
-                                <!-- 블로그 정보 -->
-                                <div class="about_me_pc">
-                                    <div class="box_sidebar about_me">
-                                        <div class="inbox">
-                                            <h3 class="title_sidebar">ABOUT ME</h3>
-                                            <p class="text_about">[##_desc_##]</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </s_sidebar_element>
+                            
 
                             <s_sidebar_element>
                                 <!-- 링크 -->
@@ -858,7 +813,6 @@
                                     <div class="inbox">
                                         <span class="total">[##_count_total_##]</span>
                                         <span class="today">[##_count_today_##]</span>
-                                        <span class="yesterday">[##_count_yesterday_##]</span>
                                     </div>
                                 </div>
                             </s_sidebar_element>
@@ -887,5 +841,11 @@
         $(el).wrap('<div class="table-overflow">')
     })
 </script>
+
+
+<!-- progress bar -->
+<script type="text/javascript" src="https://rawcdn.githack.com/mburakerman/prognroll/0feda211643153bce2c69de32ea1b39cdc64ffbe/src/prognroll.js"></script>
+<script type="text/javascript"> $(function() { $("#main").prognroll( {height:5, color:"lightgreen"} ); $(".content").prognroll({ custom:true}); }); </script>
+
 
 </html>
