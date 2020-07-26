@@ -2125,8 +2125,10 @@ html, body {
   }
 
   .area_menu .list_sns {
-    padding: 20px 0 0 61px;
+    padding: 20px 0 30px 61px;
     background-color: white;
+    border-bottom: 3px solid #222222;
+    border-right: 3px solid #222222;
   }
 
   .area_menu .box_visit {
