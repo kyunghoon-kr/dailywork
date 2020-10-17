@@ -2,16 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang&display=swap');
-@import url('https://fonts.googleapis.com/cssfamily=Noto+Serif+KR&display=swap&subset=korean');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Raleway:ital,wght@1,300&display=swap');
 /* basic */
 article, aside, canvas, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block;
 }
 
-body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, text_, th, ul {
   margin: 0;
   padding: 0
 }
@@ -22,6 +20,10 @@ body, button, input, select, table, textarea {
 }
 body, code {
 	font-family: 'Nanum Gothic Coding', monospace;
+	font-family: 'Open Sans', sans-serif;
+}
+.article_view {
+	font-size: 120%;
 }
 /* 인라인 블록*/
 code { border: 2px solid #eee; border-color: black; background-color: black; color: white; border-radius: 3px; padding: -2px -2px 5px 5px; display: inline-block; }
@@ -29,6 +31,7 @@ button, input {
   border: 0;
   border-radius: 0
 }
+
 
 img {
   display: block;
@@ -71,6 +74,27 @@ iframe {
 
 /* thema */
 /* thema_aqua */
+
+.bar { 
+  border: 2px solid #444; 
+  border-top: 0px;
+	margin-top: 70px;
+	border-right: 0px;
+	border-left: 0px;
+	opacity: 80%;
+}
+
+.bar-text {
+	float: right;
+}
+
+.bar {
+	/* background-color: white; */
+}
+.bar-text img {
+	max-height: 50px;
+	
+}
 .thema_aqua .title_post:hover {
   color: #1eb49f;
 }
@@ -408,7 +432,8 @@ html, body {
 }
 
 .area_menu .list_gnb .link_gnb:hover {
-  text-decoration: underline;
+  color: #86b069;
+  /* font-size: 150%; */
 }
 
 .area_menu .list_gnb .list_lnb {
@@ -421,7 +446,6 @@ html, body {
 }
 
 .area_menu .list_gnb .list_lnb .link_lnb:hover {
-  text-decoration: underline;
 }
 
 .area_menu .list_gnb .list_lnb li:last-child .link_lnb {
@@ -469,11 +493,11 @@ html, body {
   }
 
 .area_menu .list_sns .link_github {
-  background: url(images/github.png) no-repeat center;
+  background: url(images/github_main.png) no-repeat center;
 }
 
 .area_menu .list_sns .link_company {
-  background: url(images/zibda.png) no-repeat center;
+  background: url(images/zibda_main.png) no-repeat center;
 }
 
 .area_menu .list_sns .link_insta {
@@ -532,8 +556,12 @@ html, body {
 
 /* header */
 #header {
-  position: relative;
+  /* position: relative; */
+  width: 100%;
   border-bottom: 1px solid #eee;
+  background-color: white;
+  z-index: 1000;
+  margin-bottom: 96px;
 }
 
 #header:after {
@@ -543,12 +571,19 @@ html, body {
 }
 
 .inner_header {
-  position: relative;
-  max-width: 1600px;
-  height: 168px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  /* max-width: 1600px; */
+  height: 96px;
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
+  background-color: white;
+  /* opacity: 80%; */
+  /* border-bottom: 1px solid black; */
+  z-index: 1000;
+  margin-bottom: 30px;
 }
 
 .inner_header .logo {
@@ -589,7 +624,7 @@ html, body {
   }
 
   .inner_header .title_text {
-    font-size: 21px;
+    font-size: 1.0rem;
   }
 }
 
@@ -638,7 +673,7 @@ html, body {
 /* main */
 .inner_index {
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -712,12 +747,16 @@ html, body {
 }
 
 .article_content .article_view {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
 }
 
+@media screen and (max-width: 743px) {
+  .article_content .article_view
+    font-size: 16px;
+  }
+}
 .article_content .article_view a {
-  text-decoration: underline;
 }
 
 .article_content .article_view a:hover {
@@ -764,8 +803,8 @@ html, body {
 .article_view blockquote {
   margin: 0;
   padding-left: 19px;
-  border-left: 1px solid #4167d9;
-  font-size: 16px;
+  border-left: 1px solid #555;
+  font-size: 24px;
   line-height: 1.75;
   color: rgba(0, 0, 0, 0.54);
 }
@@ -2107,10 +2146,11 @@ html, body {
 
   /* area_menu */
   .area_menu {
-    position: relative;
+    position: fixed;
     width: 380px;
-    height: 1200px;
+    height: 100%;
     left: -380px;
+    top: 0;
     background-color: #222222;
     color: white;
     font-family: 'Poor Story', cursive;
@@ -2126,7 +2166,7 @@ html, body {
 
   .area_menu .list_sns {
     padding: 20px 0 30px 61px;
-    background-color: white;
+    background-color: #222;
     border-bottom: 3px solid #222222;
     border-right: 3px solid #222222;
   }
@@ -2213,6 +2253,9 @@ html, body {
     width: 1px;
     height: 1px
   }
+  .menu_home {
+    font-size: 28px;
+  }
 
   .area_view_content .article_content {
     margin: 0 0 40px 0;
@@ -2220,13 +2263,21 @@ html, body {
 
   /* area_menu */
   .area_menu {
-    position: relative;
-    width: 380px;
-    height: 1200px;
+    position: fixed;
+    width: 300px;
+    height: 100%;
     left: -380px;
     background-color: #222222;
     color: white;
     font-family: 'Poor Story', cursive;
+  }
+  .area_menu .list_gnb .link_gnb { 
+    border-color: rgba(255,255,255,.1);
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    margin-bottom: 3px;
+    color: white;
+    font-size: 14px;
   }
 
   .area_menu nav {
@@ -2245,7 +2296,7 @@ html, body {
   }
 
   .area_menu .list_sns {
-    padding: 76px 0 0 21px;
+    padding: 12px 0 0 12px;
   }
 
   .area_menu .m_sidebar {
@@ -2482,8 +2533,10 @@ html, body {
 }
 
 /* 상세페이지 카테고리 다른글 */
-.another_category th {
-  font-size: 13px;
+.another_category h4{
+  font-size: 200%;
+	font-family: 'Poor Story', cursive;
+	display: none;
 }
 
 .another_category th a {
@@ -2493,6 +2546,13 @@ html, body {
   white-space: nowrap;
   overflow: hidden;
   vertical-align: middle;
+  font-size: 14px;
+	font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.another_category td{
+  font-family: 'Nanum Gothic Coding', monospace;
+	font-size: 16px;
 }
 
 .another_category th span {
@@ -2510,8 +2570,73 @@ html, body {
 
 ::-webkit-scrollbar-thumb { background: lightgreen; border-radius: 20px; } /* 실질적 스크롤 바 */
 
-::-webkit-scrollbar-thumb:hover { background: cyan; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb:hover { background: springgreen; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
 
 ::-webkit-scrollbar-thumb:active { background: springgreen; } /* 실질적 스크롤 바를 클릭할 때 */
 
 ::-webkit-scrollbar-button { display: none; } /* 스크롤 바 상 하단 버튼 */
+
+.scroll-top {
+  position: fixed;
+  bottom: 50px;
+  right: 70px;
+  width: 84px;
+  height: 84px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 9999;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+	opacity: 0;
+	background-color: white;
+}
+
+.scroll-top img {
+	width: 100%;
+	overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .scroll-top {
+		 width: 42px;
+  	height: 42px;
+    bottom: 70px;
+    right: 15px;
+		background: none;
+  }
+  .inner_header {
+    font-size: 80%;
+  }
+  
+  
+}
+
+.font-blue {
+  color: #007bff;
+}
+.menu_on .area_menu {
+	margin-right: 380px;
+}
+
+.article_view a {
+	color: #007bff;
+}
+
+.article_view a:hover {
+	color: #007bff;
+	text-decoration: underline;
+}
+
+.sidebar {
+	display: none;
+}
+
+.article-content img {
+	width: 500px;
+}
+.imageblock img:hover {
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}

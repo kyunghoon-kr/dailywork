@@ -2,9 +2,12 @@
 <html lang="ko">
 
 <head>
-    <title>[##_page_title_##] :: [##_title_##]</title>
-    <meta name="title" content="[##_page_title_##] :: [##_title_##]" />
-    <meta name="description" Content="[##_desc_##]" />
+    <title>Hello World 😶  :: Junedev</title>
+    <meta name="title" content="June 개발 블로그😊" />
+    <meta name="description" Content="좋은 개발자가 되고 싶은 June의 블로그입니다." />
+		<meta name="naver-site-verification" content=""/>
+	  <meta property="og:title" content="June 개발 블로그 😶">
+		<meta property="og:description" content="좋은 개발자가 되고 싶은 June의 블로그입니다.">  
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -86,7 +89,15 @@
                             <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo" <s_if_var_logoImage>style="background-image:url('[##_var_logoImage_##]')"</s_if_var_logoImage>>
                                 <span class="blind">[##_title_##]</span>
                                 <s_not_var_logoImage>
-                                    <span class="title_text">[##_title_##]</span>
+                                    <span class="title_text">
+                                        <span class="font-blue">
+                                            &lt;header&gt;
+                                        </span>
+                                        June's Dev World
+                                        <span class="font-blue">
+                                        &lt;/header&gt;
+                                        </span>
+                                    </span>
                                 </s_not_var_logoImage>
                             </a>
                         </h1>
@@ -823,9 +834,7 @@
                 <!-- // aside -->
 
                 <!-- footer -->
-                <footer id="footer">
-                    [##_var_footerCopyright_##]
-                </footer>
+                
                 <!-- // footer -->
 
             </div>
@@ -834,7 +843,7 @@
         </div>
         <!-- // wrap -->
     </s_t3>
-
+	<div class="scroll-top"><img id='bar-img'								src='https://tistory4.daumcdn.net/tistory/3077947/skin/images/ScrollTop.png'/> </div>
 </body>
 <script>
     $('.article_content').find('table').each(function (idx, el) {
@@ -845,7 +854,49 @@
 
 <!-- progress bar -->
 <script type="text/javascript" src="https://rawcdn.githack.com/mburakerman/prognroll/0feda211643153bce2c69de32ea1b39cdc64ffbe/src/prognroll.js"></script>
-<script type="text/javascript"> $(function() { $(".article_view").prognroll( {height:5, color:"lightgreen"} ); $(".content").prognroll({ custom:true}); }); </script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/wilq32/jqueryrotate/master/jQueryRotate.js"></script>
+<script type="text/javascript"> $(function() { $(".article_view").prognroll( {height:60, color:"white"} ); $(".content").prognroll({ custom:true}); 
+$(".bar").append("<div class='bar-text' id='bar-text'><img id='bar-img' src='https://tistory4.daumcdn.net/tistory/3077947/0b25f0b1fd834f63a4a5596ceb5b75ee'/> </div>")
+																							
+																							
+}); 
+	$('.scroll-top').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 300);
+		return false;
+	});
+	window.addEventListener('scroll', () => {
+	let scrollLocation = parseInt(document.documentElement.scrollTop); // 현재 스크롤바 위치
+	let windowHeight = parseInt(window.innerHeight); // 스크린 창
+	let fullHeight = parseInt(document.body.scrollHeight); //  margin 값은 포함 x
+	let degree = parseInt((scrollLocation)/fullHeight * 360) * 5;
+	let str_deg = degree + 'deg';
+	
+	$('#bar-text').css('transform','rotate('+str_deg+')');
+	var topPos = $(this).scrollTop();
+	console.log(topPos)
+		// if user scrolls down - show scroll to top button
+		if (topPos > 300) {
+			$('.scroll-top').css("opacity", "1");
+
+		} else {
+			$('.scroll-top').css("opacity", "0");
+		}
+})
+	
+	window.onclick = function(){
+		var menuOn = $('.bar');
+		let menuOnML = menuOn.css('margin-left');
+		console.log('.menu_on'.length);
+		if($('.menu_on').length == 0) {
+			menuOn.show();
+		} else {
+			menuOn.hide();
+		}
+		
+	};
+</script>
 
 
 </html>
